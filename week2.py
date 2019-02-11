@@ -7,25 +7,38 @@ def intreverse(num):
     return rev
 
 
+def break_nums(n):
+    arr = []
+    for i in range(1, n):
+        for j in range(i, n):
+            if i + j == n:
+                arr.append([i, j])
+    return arr
+
+
 def isprime(l):
     prime = []
     for i in range(1, l+1):
         if l % i == 0:
             prime.append(i)
     if len(prime) == 2:
-        return prime[1]
+        return True
     else:
         return 0
 
 
 def sumprimes(l):
-    result = map(isprime, l)
-    resultList = list(result)
-    total_sum = sum(resultList)
-    return total_sum
+    for i in range(0, len(l)):
+        result = map(isprime, l[i])
+        resultList = list(result)
+        if resultList[0] == True and resultList[1] == True:
+            print(True)
 
-# arr = [1, 2, 3,4,5]
-def rotateList(l,k):
+
+sumprimes(break_nums(4))
+
+
+def rotateList(l, k):
     while k > 0:
         copy = l[0:1]
         l.pop(0)
@@ -37,7 +50,16 @@ def rotateList(l,k):
     #     l.pop(0)
     #     l = l + copy
 
-print(rotateList([1,2,3,4,5],12))
-# print(sumprimes([-3, 1, 6]))
-# print(isprime(5))
-# print(intreverse(3))
+
+# def is_prime(lst):
+#     count = 0
+#     for i in range(0, len(lst)):
+#         for j in range(1, lst[i]+1):
+#             if lst[i] % j == 0:
+#                 count = count + 1
+#         if count == 2:
+#             print("yea")
+
+
+# def primepartiton(l):
+#     for i in range(0,len(l)):
