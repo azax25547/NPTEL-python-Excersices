@@ -1,3 +1,4 @@
+
 def intreverse(num):
     rev = ''
     while(num != 0):
@@ -23,7 +24,20 @@ def sumprimes(l):
     total_sum = sum(resultList)
     return total_sum
 
+# arr = [1, 2, 3,4,5]
+def rotateList(l,k):
+    while k > 0:
+        copy = l[0:1]
+        l.pop(0)
+        l = l + copy
+        k = k-1
+    return l
+    # for i in range(0,k):
+    #     copy = l[0:1]
+    #     l.pop(0)
+    #     l = l + copy
 
-print(sumprimes([-3, 1, 6]))
+print(rotateList([1,2,3,4,5],12))
+# print(sumprimes([-3, 1, 6]))
 # print(isprime(5))
 # print(intreverse(3))
