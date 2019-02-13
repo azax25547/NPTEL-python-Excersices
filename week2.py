@@ -7,15 +7,6 @@ def intreverse(num):
     return rev
 
 
-def break_nums(n):
-    arr = []
-    for i in range(1, n):
-        for j in range(i, n):
-            if i + j == n:
-                arr.append([i, j])
-    return arr
-
-
 def isprime(l):
     prime = []
     for i in range(1, l+1):
@@ -27,15 +18,26 @@ def isprime(l):
         return 0
 
 
-def sumprimes(l):
+def break_nums(l):
     for i in range(0, len(l)):
         result = map(isprime, l[i])
         resultList = list(result)
         if resultList[0] == True and resultList[1] == True:
             print(True)
+        else:
+            print(False)
 
 
-sumprimes(break_nums(4))
+def sumprimes(n):
+    arr = []
+    for i in range(1, n):
+        for j in range(i, n):
+            if i + j == n:
+                arr.append([i, j])
+    break_nums(arr)
+
+
+sumprimes(7)
 
 
 def rotateList(l, k):
