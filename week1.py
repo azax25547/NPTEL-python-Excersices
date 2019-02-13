@@ -1,29 +1,3 @@
-# # def break_nums(n):
-# #     arr = []
-# #     for i in range(1, n):
-# #         for j in range(i, n):
-# #             if i + j == n:
-# #                 arr.append([i, j])
-# #     print(arr)
-
-# def isprime(l):
-#     prime = []
-#     for i in range(1, l+1):
-#         if l % i == 0:
-#             prime.append(i)
-#     if len(prime) == 2:
-#         return True
-#     else:
-#         return 0
-# def break_nums(l):
-#     for i in range(0, len(l)):
-#         result = map(isprime, l[i])
-#         resultList = list(result)
-#         if resultList[0] == True and resultList[1] == True:
-#             print(True)
-#         else:
-#             print(False)
-
 
 def break_nums(n):
     arr = []
@@ -41,9 +15,6 @@ def isprime(n):
         if n % i == 0:
             return False
     return True
-
-
-arr = [3, 4]
 
 
 def is_arr_prime(ar):
@@ -66,5 +37,30 @@ def primepartition(l):
         return True
 
 
-lol = primepartition(185)
+txt = "((jkl)78(A)&l(8(dd(FJI:),):)?)?"
+
+
+def nestingdepth(s):
+    f_p_count = s.count("(")
+    b_p_count = s.count(")")
+    if (f_p_count == b_p_count):
+        # print("true")
+        if s.find("(") == s.find(")") == -1:
+            # print(f_p_count,b_p_count)
+            return(0)
+        elif s.find("(") < s.find(")"):
+            print(f_p_count,b_p_count,3)
+
+            return(4)
+        else:
+            # print(f_p_count,b_p_count,2)
+
+            return(-1)
+    else:
+        print(f_p_count,b_p_count,1)
+        return(-1)
+
+
+lol = nestingdepth(txt)
 print(lol)
+

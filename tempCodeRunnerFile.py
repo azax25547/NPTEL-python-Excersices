@@ -1,1 +1,1 @@
-return False
+f_p_count == b_p_count == 1
