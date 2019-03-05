@@ -33,7 +33,7 @@ The transpose of a matrix makes each row into a column. For instance, the transp
   1  4  
   2  5
   3  6
- Write a Python function transpose(m) that takes as input a two dimensional matrix using this row-wise representation and returns the transpose of the matrix using the same representation.
+4. Write a Python function transpose(m) that takes as input a two dimensional matrix using this row-wise representation and returns the transpose of the matrix using the same representation.
 
 Here are some examples to show how your function should work. You may assume that the input to the function is always a non-empty matrix.
 
@@ -45,7 +45,7 @@ Here are some examples to show how your function should work. You may assume tha
 
   >>> transpose([[1,1,1],[2,2,2],[3,3,3]])
   [[1, 2, 3], [1, 2, 3], [1, 2, 3]]
-5. Define a Python function progression(l) that takes a nonempty list of integers l and returns True if the integers in l form an arithmetic progression: that is, l is of the form [a,a+d,a+2d,ï¿½,a+kd].
+5. Define a Python function progression(l) that takes a nonempty list of integers l and returns True if the integers in l form an arithmetic progression: that is, l is of the form [a,a+d,a+2d,…,a+kd].
 
 >>> progression([3])
 True
@@ -147,7 +147,7 @@ that add and multiply two polynomials, respectively.
 
 You may assume that the inputs to these functions follow the representation given above. Correspondingly, the outputs from these functions should also obey the same constraints.
 
-Hint: You are not restricted to writing just the two functions asked for. You can write auxiliary functions to "clean up" polynomials ï¿½ e.g., remove zero coefficient terms, combine like terms, sort by exponent etc. Build a library of functions that can be combined to achieve the desired format.
+Hint: You are not restricted to writing just the two functions asked for. You can write auxiliary functions to "clean up" polynomials – e.g., remove zero coefficient terms, combine like terms, sort by exponent etc. Build a library of functions that can be combined to achieve the desired format.
 
 You may also want to convert the list representation to a dictionary representation and manipulate the dictionary representation, and then convert back.
 
