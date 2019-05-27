@@ -1,6 +1,6 @@
 # python Data Structes N Algorithms
 # Binary Search
-
+from itertools import combinations
 
 # def binary_serach(l, n):
 #     # first lets brake the list and go to middle
@@ -43,16 +43,23 @@ Given a list of numbers and a number k, return whether any two numbers from the 
 For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 '''
 def is_sum(l, e):
-    for i in range(0, len(l)):
-        for j in range(i, len(l)):
-            try:
-                if (l[i] + l[j+1] == e):
-                    return True
-                else:
-                    pass
-            except IndexError:
-                pass
-    return False
+    # is_found = False
+    combination_set = []
+    for i in range(1,len(l)):
+        for j in combinations(l,i):
+            if (sum(j) == e):
+                combination_set.append(list(j))
+    print(combination_set)
+ 
 
-
-print(is_sum([10, 15, 3, 7], 17))
+is_sum([1,2,3,4,5,6,7], 10)
+# for i in range(0, len(l)):
+    #     for j in range(i, len(l)):
+    #         try:
+    #             if (l[i] + l[j+1] == e):
+    #                 return True
+    #             else:
+    #                 pass
+    #         except IndexError:
+    #             pass
+    # return False

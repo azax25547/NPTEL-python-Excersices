@@ -233,15 +233,47 @@ def matrixflip(l,d):
         return(l)
 
 # print(matrixflip([[1,2],[3,4]],'h'))
+'''
+Digit Frequency by HackerRank
 
-score = {'match1':{'player1':57, 'player2':38}, 'match2':{'player3':9, 'player1':42}, 'match3':{'player2':41, 'player4':63, 'player3':91}}
-keys = list(score.values())
-# for i in range(0,len(keys)):
-# print(keys)
-arr = []
-for i in range(0,len(keys)):
-    # print(list(keys[i].values()))
-    l = max(sorted(list(keys[i].values())))
-    arr.append(l)
-print(arr)
-    
+'''
+def count_each_char(char):
+    res = []
+    total = []
+    for item in char:
+        if not item.isalpha():
+            res.append(item)
+    for i in range(0,9):
+        if not res.count(str(i)):
+            total.append('0')
+        else:
+            total.append(str(res.count(str(i))))
+
+    return " ".join(total)
+
+def count_each_digit(char):
+    #using list comprehension
+    res = [i for i in char if not i.isalpha()]
+    total = ['0' if not res.count(str(i)) else str(res.count(str(i))) for i in range(0,9) ]
+    return " ".join(total)
+
+# print(count_each_char("a11472o5t6"))
+# list comprehension
+
+new = [i  for i in range(10)]
+new1 = [i  for i in range(10) if i %2 == 0] 
+# print(new1)
+
+def super_digit(num):
+    sum = 0
+    while(num>=10):
+        a = num
+        sum = 0
+        while(a > 0):
+            d = a % 10
+            sum = sum + d
+            a = a // 10
+        num = sum
+    print(num)
+
+
